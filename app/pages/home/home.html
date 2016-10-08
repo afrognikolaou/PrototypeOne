@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="userProfile?.firstName">
+      Welcome {{userProfile?.firstName}}
+    </ion-title>
+    <ion-title *ngIf="!userProfile?.firstName">
+      Welcome Guest
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="presentPopOver($event)"><ion-icon name="cog"></ion-icon> </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button stacked Block (click)="openMenuPage()">Take picture</button>
+
+</ion-content>

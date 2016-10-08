@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>SignUp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="signup">
+
+	<img src= "http://placehold.it/300x100">
+
+	<form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+
+		<ion-item>
+			<ion-label stacked>Email</ion-label>
+			<ion-input formControlName="email" type="email" 
+			placeholder="Your email address"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label stacked>PassWord</ion-label>
+			<ion-input formControlName="password" type="password" 
+			placeholder="Your Password"></ion-input>
+		</ion-item>
+
+		<button block type="submit">
+			Create an account
+		</button>
+
+	</form>
+
+</ion-content>
